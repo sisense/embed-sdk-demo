@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <!-- Meta info -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sisense Embed SDK Demo & Docs">
+    <meta name="author" content="Moti Granovsky (Sisense DevX)">
+
+    <!-- Title -->
+    <title>Sisense Embed SDK Demo</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Page CSS -->
+    <link href="./css/main.css" rel="stylesheet">
+    
+  </head>
+  <body>
+
+    <!-- TOP BAR -->
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Sisense Embedding</a>
+    </nav>
+
+    <!-- MAIN SECTION -->
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- SIDE BAR -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+            </ul>
+          </div>
+        </nav>
+
+        <!-- CONTENT -->
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+
+          <!-- DASH HEAD -->
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Dashboard</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group mr-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary" id="exportButton">Export</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" id="advancedButton">Advanced Mode</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" id="sizingButton">Sizing Mode</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" id="editButton">Edit Mode</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- DASH FILTERS -->
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-3 border-bottom">
+            <div class="btn-toolbar mb-2 mb-md-0" style="width:100%">
+              <form style="width:100%">
+                <div class="form-row align-items-center">
+                  <div class="col col-md-1">
+                    <h5>Filters</h5>
+                  </div>
+                  <div class="col col-md-3">
+                    <label class="sr-only" for="fromDate">From</label>
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">From</div>
+                      </div>
+                      <input type="date" class="form-control" id="fromDate">
+                    </div>
+                  </div>
+                  <div class="col col-md-3">
+                    <label class="sr-only" for="toDate">To</label>
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">To</div>
+                      </div>
+                      <input type="date" class="form-control" id="toDate">
+                    </div>
+                  </div>
+                  <div class="col col-md-2">
+                    <label class="sr-only" for="countryInput">Country</label>
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Country</div>
+                      </div>
+                      <input type="text" class="form-control" id="countryInput" placeholder="Starts with...">
+                    </div>
+                  </div>
+                  <div class="col col-md-1">
+                    <div class="form-check mb-2">
+                      <input class="form-check-input" type="checkbox" id="save">
+                      <label class="form-check-label" for="save">
+                        Save changes
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col col-md-2">
+                    <button type="button" class="btn btn-primary mb-2" id="filterButton">Apply</button>
+                    <button type="button" class="btn btn-primary mb-2" id="clearButton">Clear</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- IFRAME -->
+          <div class="row">
+            <div class="col">
+              <div id="frameContainer"></div>
+            </div>
+          </div>
+          
+          <!-- CONSOLE OUTPUT -->
+          <div class="row">
+            <div class="col">
+              <div id="logContainer"><pre><code></code></pre></div>
+            </div>
+          </div>
+
+          <!-- SPACER -->
+          <div>
+            &nbsp;
+          </div>
+
+        </main>
+      </div>
+    </div>
+
+    <!-- Polyfills --> 
+    <script src="./js/array-find.poly.js"></script> 
+    <!-- Get iFrame SDK -->
+    <script src="http://10.53.1.107:8081/js/frame.js"></script>
+    <!-- Configuration code file -->
+    <script src="./js/config.js"></script>
+    <!-- Logger code file -->
+    <script src="./js/log.js"></script>
+    <!-- Page code file -->
+    <script src="./js/index.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "sisense-embedsdk-demo",
+  "version": "1.0.0",
+  "description": "Sisense Embed SDK Demo",
+  "main": "dash.html",
+  "scripts": {
+    "start": "http-server ./ -p 8887 -a localhost -o http://localhost:8887/index.html -c-1 -e html"
+  },
+  "author": "Moti Granovsky",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
